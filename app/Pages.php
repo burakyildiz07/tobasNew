@@ -10,5 +10,9 @@ class Pages extends Model
         'page_name', 'status', 'slug',
     ];
 
+    public function contents(){
+        return $this->hasMany('App\Content','pages_id', 'id');
+    }
+
 
 }

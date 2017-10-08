@@ -37,7 +37,10 @@ Route::group(['prefix'=>'manager'],function (){
     /*
      * Content Routes
     */
-    Route::get('/content/create',['uses'=>'Manager\ContentController@create','as'=>'manager.content-create']);
+    Route::get('/contents',['uses'=>'Manager\ContentController@index','as'=>'manager.contents']);
+    Route::get('/contents/create',['uses'=>'Manager\ContentController@create','as'=>'manager.content-create']);
+    Route::post('/contents/create',['uses'=>'Manager\ContentController@store','as'=>'manager.content-create-post']);
+    Route::get('/contents/edit/{id}',['uses'=>'Manager\ContentController@edit','as'=>'manager.content-edit']);
 
 
 });

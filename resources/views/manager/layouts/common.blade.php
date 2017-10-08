@@ -5,46 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#ffa20d" />
-    <meta name="msapplication-TileImage" content="{{ asset('assets/icons/ms-icon-144x144.png') }}" />
+    <meta name="msapplication-TileImage" content="{{ asset('manager/assets/icons/ms-icon-144x144.png') }}" />
     <meta name="theme-color" content="#ffa20d" />
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/icons/apple-icon-57x57.png') }}" />
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/icons/apple-icon-60x60.png') }}" />
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/icons/apple-icon-72x72.png') }}" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/icons/apple-icon-76x76.png') }}" />
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/icons/apple-icon-114x114.png') }}" />
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/icons/apple-icon-120x120.png') }}" />
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/icons/apple-icon-144x144.png') }}" />
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/icons/apple-icon-152x152.png') }}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/icons/apple-icon-180x180.png') }}" />
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/icons/android-icon-192x192.png') }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/icons/favicon-32x32.png') }}" />
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/icons/favicon-96x96.png') }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/icons/favicon-16x16.png') }}" />
-    <link rel="manifest" href="{{ asset('assets/icons/manifest.json') }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('manager/assets/icons/apple-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('manager/assets/icons/apple-icon-60x60.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('manager/assets/icons/apple-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('manager/assets/icons/apple-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('manager/assets/icons/apple-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('manager/assets/icons/apple-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('manager/assets/icons/apple-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('manager/assets/icons/apple-icon-152x152.png') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('manager/assets/icons/apple-icon-180x180.png') }}" />
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('manager/assets/icons/android-icon-192x192.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('manager/assets/icons/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('manager/assets/icons/favicon-96x96.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('manager/assets/icons/favicon-16x16.png') }}" />
+    <link rel="manifest" href="{{ asset('manager/assets/icons/manifest.json') }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('assets/css/icons.min.css') }}" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('assets/css/datetimepicker.min.css') }}" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('assets/css/select.min.css') }}" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('assets/css/select.bootstrap.min.css') }}" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('manager/assets/css/icons.min.css') }}" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('manager/assets/css/datetimepicker.min.css') }}" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('manager/assets/css/select.min.css') }}" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('manager/assets/css/select.bootstrap.min.css') }}" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('manager/assets/css/common.css') }}" crossorigin="anonymous" />
     <title>@yield('title') | {{ Config::get('app.name') }}</title>
-    <script src="{{ asset('assets/js/common/jquery-3.2.1.min.js') }}" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/common/ajax-form.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/common/jquery-3.2.1.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/common/ajax-form.min.js') }}" crossorigin="anonymous"></script>
     <script>
         $(window).on('load', function() {
             $(".loading").show().fadeOut("slow");
         });
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/fusioncharts/fusioncharts.js') }}" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/fusioncharts/fusioncharts.charts.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/fusioncharts/fusioncharts.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/fusioncharts/fusioncharts.charts.js') }}" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://momentjs.com/downloads/moment-with-locales.min.js" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/common/datetimepicker.min.js') }}" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/common/select.min.js') }}" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/common/typeahead.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/common/datetimepicker.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/common/select.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('manager/assets/js/common/typeahead.min.js') }}" crossorigin="anonymous"></script>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=2067lun7ryo0lja1xiz47nken8b4bh3373kx5w6sueuxo5ee"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
     <script>
@@ -101,12 +101,13 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ route('manager.home') }}">
-                <img alt="Brand" src="{{ asset('assets/images/nav-logo.png') }}">
+                <img alt="Brand" src="{{ asset('manager/assets/images/nav-logo.png') }}">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="crm-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{route('manager.pages')}}"><i class="fa fa-turkish-lira" aria-hidden="true"></i>Sayfalar</a></li></li>
+                <li><a href="{{route('manager.contents')}}"><i class="fa fa-turkish-lira" aria-hidden="true"></i>İçerikler</a></li></li>
                 <li><a href=""><i class="fa fa-users" aria-hidden="true"></i>Slider</a></li>
                 <li><a href=""><i class="fa fa-users" aria-hidden="true"></i>Galeri</a></li>
                 <li class="dropdown">
