@@ -41,6 +41,7 @@ Route::group(['prefix'=>'manager'],function (){
     Route::get('/contents/create',['uses'=>'Manager\ContentController@create','as'=>'manager.content-create']);
     Route::post('/contents/create',['uses'=>'Manager\ContentController@store','as'=>'manager.content-create-post']);
     Route::get('/contents/edit/{id}',['uses'=>'Manager\ContentController@edit','as'=>'manager.content-edit']);
+    Route::post('/contents/edit',['uses'=>'Manager\ContentController@update','as'=>'manager.content-edit-post']);
 
 
 });

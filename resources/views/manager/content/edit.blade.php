@@ -7,7 +7,7 @@
                 <div class="panel panel-crm">
                     <div class="panel-heading"><h1>İçerik Düzenle</h1></div>
                     <div class="panel-body">
-                        {{ Form::open(array('url'=>route('manager.content-create-post'),'method'=>'post','autocomplete'=>'off','enctype'=>'multipart/form-data')) }}
+                        {{ Form::open(array('url'=>route('manager.content-edit-post'),'method'=>'post','autocomplete'=>'off','enctype'=>'multipart/form-data')) }}
                         <div class="row">
                             <div class="form-group col-md-12">
                                 {{ Form::label('icerikBasligi', 'İçerik Başlığı')}}
@@ -32,7 +32,7 @@
                                 {{ Form::label('kategori', 'Kategori')}}
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                                    {{ Form::select('kategori',$page_name,$content->page_id,array('class'=>'form-control','id'=>'kategori','placeholder'=>'Katagori')) }}
+                                    {{ Form::select('kategori',$page_name,$content->pages_id,array('class'=>'form-control','id'=>'kategori','placeholder'=>'Katagori')) }}
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                 {{ Form::label('icerik', 'İçerik')}}
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                                    {{ Form::textarea('icerik','',array('class'=>'form-control','id'=>'icerik','placeholder'=>'İçerik')) }}
+                                    {{ Form::textarea('icerik',$content->content,array('class'=>'form-control','id'=>'icerik','placeholder'=>'İçerik')) }}
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                {{ Form::submit('Oluştur',array('class'=>'btn btn-lg btn-success btn-block')) }}
+                                {{ Form::submit('Kaydet',array('class'=>'btn btn-lg btn-success btn-block')) }}
                             </div>
                         </div>
                         {{ Form::close() }}

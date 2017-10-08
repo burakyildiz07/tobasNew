@@ -48,7 +48,7 @@ class ContentController extends Controller
             if (Input::hasFile('dosya'))
             {
                 // Image Upload
-                if($files = Input::file('dosys')){
+                if($files = Input::file('dosya')){
 
                     $file_name = str_slug(Input::get('icerikBasligi')).'.'.strtolower(Input::file('dosya')->getClientOriginalExtension());
                     $files->move('files', $file_name);
@@ -85,5 +85,60 @@ class ContentController extends Controller
 
         $content = Content::find($id);
         return view('manager.content.edit')->withContent($content)->withPages($pages);
+    }
+
+    public function update()
+    {
+        $validator = Validator::make(Input::all(),array(
+            'icerikBasligi' => 'required',
+            'kategori' => 'required',
+            'dosya' => 'mimes:pdf,txt',
+        ),$this->messages);
+
+        if($validator->fails())
+        {
+            return Redirect::back()->withInput()->withErrors($validator);
+        }
+        else if($validator->passes())
+        {
+            if (Input::hasFile('dosya'))
+            {
+
+                // Image Upload
+                if($files = Input::file('dosya')){
+
+
+                   // $file_name = str_slug(Input::get('icerikBasligi')).'.'.strtolower(Input::file('dosya')->getClientOriginalExtension());
+                    //$files->move('files', $file_name);
+
+                    Content::where('id', Input::get('id'))->update([
+                        'pages_id' => Input::get('kategori'),
+                        'title' => Input::get('icerikBasligi'),
+                        'content' => Input::get('icerik'),
+                        'file' =>'ok',
+                        'slug' => str_slug(Input::get('icerikBasligi')),
+                        'status' => 'active'
+                    ]);
+
+                    return  'ok';
+                }
+
+
+
+
+            }
+            else{
+                Content::where('id', Input::get('id'))->update([
+                    'pages_id' => Input::get('kategori'),
+                    'title' => Input::get('icerikBasligi'),
+                    'content' => Input::get('icerik'),
+                    'slug' => str_slug(Input::get('icerikBasligi')),
+                    'status' => 'active'
+                ]);
+            }
+
+
+            return Redirect::route('manager.contents')->withSuccess('Başarıyla Bir İçerik Düzenlediniz.');
+        }
     }
 }
